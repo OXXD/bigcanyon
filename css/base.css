@@ -11,6 +11,20 @@ h4 {
     line-height: inherit;
 }
 
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .slide {
     min-height: 200px;
     box-sizing: border-box;
@@ -18,12 +32,17 @@ h4 {
     padding: 80px 0px;
 }
 
+.slide .slide {
+    padding: 30px 100px;
+    padding-bottom: 0px;
+}
+
 .section-1 {
     min-height: calc(80vh - 180px);
     min-height: 550px;
     padding: 80px 0px;
     padding-top: 148px;
-    background: url(../img/Fgh_7NL7tUTwm130DlfloSBHMeXc.jpg) no-repeat;
+    background: url(../img/bg-img.jpg) no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     display: flex;
@@ -76,6 +95,34 @@ h4 {
     font-weight: 500;
 }
 
+.media-group, .text-group {
+    margin: 10px;
+}
+
+.media-group {
+    padding: 0;
+}
+
+.text-group {
+    padding: 22px 26px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.section-3 .s-content:last-child .media-group {
+    float: right;
+}
+
+/* 1000px 以下 */
+@media screen and (max-width: 1000px) {
+    .text-group {
+        padding: 10px;
+    }
+    
+    .text-group .sub-title {
+        font-size: 16px;
+    }
+}
+
 /* 小屏幕下 */
 @media screen and (max-width: 750px) {
     .slide {
@@ -92,6 +139,15 @@ h4 {
 
     .bg-image {
         margin-top: 130px;
+    }
+
+    .slide .slide {
+        padding: 30px 0px;
+        padding-bottom: 0px;
+    }
+
+    .media-group, .text-group {
+        margin: 10px 0px;
     }
 
 }
