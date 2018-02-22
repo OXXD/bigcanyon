@@ -1,0 +1,135 @@
+body {
+    line-height: 1.4;
+    font-family: roboto condensed,PingFang SC,Microsoft YaHei,微软雅黑,STXihei,华文细黑,sans-serif;
+}
+
+h1 {
+    margin: 20px 0px 10px;
+}
+
+h4 {
+    line-height: inherit;
+}
+
+.slide {
+    min-height: 200px;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+    padding: 80px 0px;
+}
+
+.section-1 {
+    min-height: calc(80vh - 180px);
+    min-height: 550px;
+    padding: 80px 0px;
+    padding-top: 148px;
+    background: url(../img/Fgh_7NL7tUTwm130DlfloSBHMeXc.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    transition: all .5s linear;
+}
+
+.section-1::before {
+    background: rgba(0, 0, 0, 0.39);
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 中大屏幕下 */
+@media screen and (min-width: 750px) {
+    .section-1 {
+        /* min-height: 550px; */
+        background-attachment: fixed;
+    }
+    
+}
+
+.bg-image {
+    margin-top: 80px;
+    transition: all .5s linear;
+}
+
+.font-title {
+    font-size: 56px;
+}
+
+.sub-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section-2 {
+    background: #eaecf0;
+}
+
+.content-title {
+    font-size: 36px;
+    color: #222;
+    font-weight: 500;
+}
+
+/* 小屏幕下 */
+@media screen and (max-width: 750px) {
+    .slide {
+        padding: 80px 30px;
+    }
+
+    .section-1 {
+        padding-top: 148px;
+    }
+
+    .font-title {
+        font-size: 36px;
+    }
+
+    .bg-image {
+        margin-top: 130px;
+    }
+
+}
+
+/* 超小屏幕下 */
+@media screen and (max-width: 480px) {
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .content-title {
+        font-size: 24px;
+    }
+
+
+}
+
+
+.bright-arrow {
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+}
+
+.a1, .a2 {
+    width: 50%;
+    border: 25px solid #eaecf0;
+    position: absolute;
+    border-top: none;
+}
+
+.a1 {
+    left: 0;
+    border-right-color: transparent;
+}
+
+.a2 {
+    right: 0;
+    border-left-color: transparent;
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <style>
+        .using_amp_tabs {
+            position: relative;
+            height: 520px;
+            margin-top: 50px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .u_tab {
+            position: absolute;
+            bottom: 0;
+            width: 340px;
+            height: 480px;
+            border-radius: 5px;
+            transition: all .3s linear;
+            background: url(/img/using_amap_tabs.6d1e5b.jpg) no-repeat;
+            background-size: auto 3640px;
+        }
+
+        .current {
+            height: 520px;
+            margin-top: -20px;
+            z-index: 10;
+        }
+
+        .tab1 { left: 0px;    background-position: 0px 0px; }
+        .tab2 { left: 160px;  background-position: 0px -520px; }
+        .tab3 { left: 330px;  background-position: 0px -1040px; }
+        .tab4 { left: 500px;  background-position: 0px -1560px; }
+        .tab5 { left: 670px;  background-position: 0px -2080px; }
+        .tab6 { left: 850px;  background-position: 0px -2600px; }
+        .tab7 { left: 1010px; background-position: 0px -3120px; }
+    </style>
+</head>
+<body>
+    <div class="using_amp_tabs">
+        <div class="u_tab tab1"></div>
+        <div class="u_tab tab2"></div>
+        <div class="u_tab tab3"></div>
+        <div class="u_tab tab4"></div>
+        <div class="u_tab tab5"></div>
+        <div class="u_tab tab6"></div>
+        <div class="u_tab tab7"></div>
+    </div>
+    
+    <script>
+        $('.u_tab').hover(
+            function () {
+                var $this = $(this);
+                $this.css({zIndex: 10, opacity: 1}).addClass('current').siblings().removeClass('current');
+                var zIndex = $this.css('zIndex');
+                for (const prev of $this.prevAll()) {
+                    zIndex--;
+                    $(prev).css({
+                        zIndex: zIndex,
+                    });
+                }
+                for (const next of $this.nextAll()) {
+                    zIndex--;
+                    $(next).css({
+                        zIndex: zIndex,
+                    });
+                }
+              
+            },
+            function () {
+            }
+        )
+    </script>
+</body>
+</html>
