@@ -22,7 +22,7 @@
             width: 340px;
             height: 480px;
             border-radius: 5px;
-            transition: all .3s linear;
+            transition: all .1s linear;
             background: url(/img/using_amap_tabs.6d1e5b.jpg) no-repeat;
             background-size: auto 3640px;
         }
@@ -44,13 +44,13 @@
 </head>
 <body>
     <div class="using_amp_tabs">
-        <div class="u_tab tab1"></div>
-        <div class="u_tab tab2"></div>
-        <div class="u_tab tab3"></div>
-        <div class="u_tab tab4"></div>
-        <div class="u_tab tab5"></div>
-        <div class="u_tab tab6"></div>
-        <div class="u_tab tab7"></div>
+            <div class="u_tab tab1"></div>
+            <div class="u_tab tab2"></div>
+            <div class="u_tab tab3"></div>
+            <div class="u_tab tab4"></div>
+            <div class="u_tab tab5"></div>
+            <div class="u_tab tab6"></div>
+            <div class="u_tab tab7"></div>
     </div>
     
     <script>
@@ -65,6 +65,7 @@
                         zIndex: zIndex,
                     });
                 }
+                zIndex = 10;
                 for (const next of $this.nextAll()) {
                     zIndex--;
                     $(next).css({
