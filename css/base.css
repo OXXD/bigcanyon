@@ -11,6 +11,10 @@ h4 {
     line-height: inherit;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
 .lf {
     float: left;
 }
@@ -155,13 +159,13 @@ h4 {
     z-index: 10;
 }
 
-.tab1 { left: 40px;    background-position: 0px 0px; }
+.tab1 { left: 40px;   background-position: 0px 0px; }
 .tab2 { left: 160px;  background-position: 0px -520px; }
 .tab3 { left: 320px;  background-position: 0px -1040px; }
 .tab4 { left: 480px;  background-position: 0px -1560px; }
 .tab5 { left: 640px;  background-position: 0px -2080px; }
 .tab6 { left: 800px;  background-position: 0px -2600px; }
-.tab7 { left: 960px; background-position: 0px -3120px; }
+.tab7 { left: 960px;  background-position: 0px -3120px; }
 
 .using_amp_tabs.content-box {
     max-width: 1360px;
@@ -181,6 +185,29 @@ h4 {
     z-index: -1;
 }
 
+.section-6 {
+    background: #eaecf0;
+}
+
+.form-field {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.form-field .sm-input input, .form-field .lg-input textarea {
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+    box-sizing: content-box;
+    font-size: 18px;
+    outline: none;
+}
+
+.form-field .lg-input textarea {
+    margin-top: 20px;
+    height: 120px;
+}
+
 /* 1000px 以下 */
 @media screen and (max-width: 1000px) {
     .text-group {
@@ -195,12 +222,16 @@ h4 {
     .section-5 {
         display: none;
     }
+
+    .section-6 {
+        background: #fff; 
+    }
 }
 
 /* 小屏幕下 */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .slide {
-        padding: 80px 30px;
+        padding: 30px;
     }
 
     .section-1 {
@@ -220,11 +251,17 @@ h4 {
         padding-bottom: 0px;
     }
 
-    .media-group, .text-group, .showcase-group {
+    .media-group, .text-group, .showcase-group, .sm-input {
         margin: 10px 0px;
     }
 
-    
+    .form-field {
+        max-width: 440px;;
+    }
+
+    .form-field .lg-input textarea {
+        margin-top: 10px;
+    }
 
 }
 
