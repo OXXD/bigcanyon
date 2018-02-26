@@ -60,4 +60,29 @@ $(() => {
         }
         
     });
-})
+});
+
+// 楼层滚动
+$(() => {
+    var $navbar = $('.navbar-fixed'),
+        $navbarCollapse = $navbar.find('.navbar-collapse');
+
+    $(window).scroll(function () { 
+        var scrollTop = $('html, body').scrollTop();
+        // console.log(scrollTop);
+        
+        // console.log($navbar);
+        if (scrollTop > 400) {
+            $navbar.addClass('animated');
+        } else {
+            $navbar.removeClass('animated');
+        }
+    });
+    
+
+    $navbar.find('.nav.navbar-nav').children().click(function (e) {
+        // e.preventDefault();
+        $navbarCollapse.removeClass('in');
+        // $('[data-target=#bs-example-navbar-collapse-2]').addClass('collapsed');
+    });
+});
