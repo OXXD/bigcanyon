@@ -163,8 +163,8 @@ h4 {
 .tab2 { left: 160px;  background-position: 0px -520px; }
 .tab3 { left: 320px;  background-position: 0px -1040px; }
 .tab4 { left: 480px;  background-position: 0px -1560px; }
-.tab5 { left: 640px;  background-position: 0px -2080px; }
-.tab6 { left: 800px;  background-position: 0px -2600px; }
+.tab5 { left: 640px;  background-position: 0px -2080px; z-index: 9}
+.tab6 { left: 800px;  background-position: 0px -2600px; z-index: 8}
 .tab7 { left: 960px;  background-position: 0px -3120px; }
 
 .using_amp_tabs.content-box {
